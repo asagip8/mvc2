@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "ShowAllForums";
+}
+
+<h2>ShowAllForums</h2>
+ <p>Here are all the avialable forums</p>
+@{
+    ForumApplication.Models.ForumSystem fs = ForumApplication.Models.ForumSystem.initForumSystem();
+    List<string> forums = fs.displayForums();
+    foreach (string s in forums)
+    {
+        Html.ActionLink(s, , );
+    }
+}
+
+@Html.ActionLink("Food", "ForumExample", "ForumExample");
+
+@Html.ActionLink("Create a forum", "CreateForum", "CreateForum");
